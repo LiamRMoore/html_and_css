@@ -5,8 +5,21 @@
     <title>Homepage</title>
   </head>
   <body>
-    <h1>Welcome to the Homepage</h1>
-    <p>A paragraph as an excuse to hold <a href="colours.html">a link</a></p>
+
+    <!-- header -->
+    <header>
+      <h1>Welcome to the Homepage</h1>
+      <p>holding <a href="colours.html">links</a> like its 1992</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- music clip -->
     <h2>Music</h2>
     <p>I play the ukelele</p>
     <audio controls>
@@ -14,5 +27,216 @@
       <source src="audio/audio/ukulele.ogg" type="audio/ogg">
       <a href="audio/audio/ukulele.mp3">Ukulele audio recording</a>
     </audio>
+
+    <!-- video clip -->
+    <h2>Video</h2>
+    <p>I include a video file</p>
+    <video controls>
+      <source src="video/video/example.mp4" type="video/mp4">
+      <source src="video/video/example.webm" type="video/webm">
+      <source src="video/video/example.ogv" type="video/ogg">
+      Your web browser is outdated and doesn't support HTML video. Please
+      consider <a href="http://browsehappy.com">updating</a>.
+    </video>
+
+    <!-- lists -->
+    <h3>An ordered list</h3>
+    <ol>
+      <li>wake up</li>
+      <li>brush teeth</li>
+      <li>shower</li>
+    </ol>
+
+    <h3>A description list</h3>
+    <dl class="">
+      <dt>Title:</dt>
+      <dd>An imaginary book title</dd>
+      <dt>Author:</dt>
+      <dd>Brad Schiff</dd>
+      <dd>John Doe</dd>
+      <dt>Pages:</dt>
+      <dd>500</dd>
+    </dl>
+
+    <!-- text formatting -->
+    <h3>Bold and italic</h3>
+    <p>when eating <strong>it is imperative</strong> that you <em>chew</em>.</p>
+
+    <h2><strong>special</strong> characters</h2>
+    <ul>
+      <li>Right single quote: &rsquo;</li>
+      <li>Left single quote: &lsquo;</li>
+      <li>Right double quote: &rdquo;</li>
+      <li>Left double quote: &ldquo;</li>
+      <li>Ampersands: &amp;</li>
+      <li>Greater than: &gt;</li>
+      <li>Less than: &lt;</li>
+      <li>Copyright: &copy;</li>
+      <li>Registered Symbol: &trade;</li>
+    </ul>
+
+    <!-- a section containing articles -->
+    <section>
+      <article>
+        <header>
+          <h1>Sample article 1</h1>
+          <p>Posted on 4th April 2020</p>
+        </header>
+
+
+        <div class="article-body">
+          <p>This is a <span class="brand-colour">bunch</span> of text in a
+            paragraph again</p><!-- span tags text for targeted styling-->
+        </div><!-- creates a custom semantic division, like header or article -->
+
+        <footer>
+          4 comments
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h1>Sample article 2</h1>
+          <p>Posted on 4th April 2020</p>
+        </header>
+
+        <p>This is a bunch of different text in a paragraph again again</p>
+
+        <aside>
+          <h2>Glossary:</h2>
+          <p>Example glossary</p>
+        </aside>
+
+        <footer>
+          2 comments
+        </footer>
+      </article>
+    </section><!-- articles-->
+
+    <!-- form -->
+    <section>
+      <h1>Input forms</h1>
+      <form>
+        <!-- an input field (preferred method - separate label) -->
+        <label for="firstName">First Name:</label><!-- associate label -->
+        <!-- name attr allows programming languages to access as vars-->
+        <input type="text" id="firstName" name="firstName">
+        <input type="submit" value="Submit"><!-- button -->
+        <!-- alternatively can associate also by moving input inside label -->
+        <label for="lastName">Last Name:
+          <!-- set name attr to allow variable access -->
+          <input type="text" name="lastName">
+        </label>
+      </form>
+
+      <h1>User data form</h1>
+
+      <h3>basic user data</h3>
+      <form>
+        <label for="email">Email:</label>
+        <!-- custom email input type expects @ etc-->
+        <input id="email" type="email" name="email">
+        <input type="submit" value="Save!">
+      </form>
+
+      <form>
+        <label for="telephone">Telephone</label>
+        <!-- likewise numeric digits -->
+        <input id="telephone" type="tel" name="telephone">
+        <input type="submit" value="Save!">
+      </form>
+
+      <h3>larger text input</h3>
+      <form>
+        <label for="yourMessage">Your Message:</label>
+        <textarea id="yourMessage" name="yourMessage"></textarea>
+        <input type="submit" value="Save!">
+      </form>
+
+      <h3>select option</h3>
+      <label for="favouriteColour">What's your favourite colour?</label>
+      <select name="favouriteColour" id="favouriteColour">
+        <option value="colourRed">Red</option>
+        <option value="colourOrange">Orange</option>
+        <option value="colourYellow">Yellow</option>
+      </select>
+
+      <h3>radio option</h3>
+      <!-- mutually exclusive inputs -->
+      <fieldset>
+        <legend>What is your favourite meal?</legend>
+        <input type="radio" name="favouriteMeal" id="breakfast" value="meal1">
+        <label for="breakfast">Breakfast</label>
+        <input type="radio" name="favouriteMeal" id="lunch" value="meal2">
+        <label for="lunch">Lunch</label>
+        <input type="radio" name="favouriteMeal" id="dinner" value="meal3">
+        <label for="dinner">Dinner</label>
+      </fieldset><!-- set of related fields -->
+
+      <h3>checkbox option</h3>
+      <!-- unrelated inputs -->
+      <fieldset>
+        <legend>Which meal do you enjoy?</legend>
+        <input type="checkbox" name="favouriteMeal" id="breakfast" value="meal1">
+        <label for="breakfast">Breakfast</label>
+        <input type="checkbox" name="favouriteMeal" id="lunch" value="meal2">
+        <label for="lunch">Lunch</label>
+        <input type="checkbox" name="favouriteMeal" id="dinner" value="meal3">
+        <label for="dinner">Dinner</label>
+      </fieldset><!-- set of related fields -->
+
+    </section>
+
+    <section>
+      <h1>Tables</h1>
+
+      <section>
+        <h1>first table</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Item name</th><!-- table header -->
+              <th>Aisle</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead><!-- col names go here -->
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td>N/A</td>
+              <td>£4.50</td>
+              <td>N/A</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Bread</td>
+              <td>2</td>
+              <td>£2.50</td>
+              <td>1</td>
+            </tr><!-- table row -->
+            <tr>
+              <td>Oat Milk</td>
+              <td>1</td>
+              <td>£2</td>
+              <td>2</td>
+            </tr>
+          </tbody><!-- all data in tbody -->
+
+        </table>
+      </section>
+    </section>
+
+    <!-- sidebar -->
+    <aside>
+      <h2>Sidebar</h2>
+      <p>Stuff to one side</p>
+    </aside>
+
+    <footer>
+      &copy; is violence
+    </footer>
+
   </body>
 </html>
