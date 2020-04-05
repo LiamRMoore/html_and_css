@@ -3,10 +3,22 @@ html {
   line-height: 1.5;
 }
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 15px;
+/* custom fonts */
+/* definition */
+@font-face {
+  font-family: "PTSans";
+  src: url("./fonts/pt_sans/pt_sans_reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+body {
+  font-family: "PTSans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #FFF;
+}
+
+/* end fonts */
 
 img {
   max-width: 100%;
@@ -41,9 +53,10 @@ a {
 
 .container{
   background-color: #FFF;
+  background-image: url("/home/lrm/projects/html_and_css/css/all_basics/Hubble_ultra_deep_field_high_rez_edit1.jpg");
+  background-repeat: repeat-x;
   max-width: 940px;
   padding-left: 40px;
-  padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -52,6 +65,9 @@ a {
 header {
   color: #617140;
   padding-top: 20px;
+  background-image: url("/home/lrm/projects/html_and_css/css/all_basics/media/images/life-on-the-tracks.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 footer {
